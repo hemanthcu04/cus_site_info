@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Contains cus_site_info.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function cus_site_info_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the cus_site_info module.
+    case 'help.page.cus_site_info':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Custom Site Information to add site api key to default configuration and to generate json of page type content type') . '</p>';
+      $output .= '<p>' . t('To get json of node you need to type http://yoursitedomain/page_json/{node_id}') . '</p>';
+      return $output;
+
+    default:
+  }
+}

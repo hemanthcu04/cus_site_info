@@ -1,0 +1,5 @@
+services:
+  cus_site_info.route_subscriber:
+    class: 'Drupal\cus_site_info\Routing\CustomSiteInformationRouteSubscriber'
+    tags:
+      - { name: event_subscriber }

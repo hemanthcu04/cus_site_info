@@ -1,0 +1,7 @@
+cus_site_info.page_to_json:
+  path: '/page_json/{node_id}'
+  defaults:
+    _controller: '\Drupal\cus_site_info\Controller\PageToJsonController::json'
+    node_id: '1'
+  requirements:
+    _custom_access: '\Drupal\cus_site_info\Controller\PageToJsonController::access'
